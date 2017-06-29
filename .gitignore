@@ -30,7 +30,16 @@ phpunit.phar
 tests/_output/*
 tests/_support/_generated
 
+# temporary, log and other service data
 runtime
-tmp
+/tmp
 
+# dynamic changed data
 /web/assets/*
+
+# local configuration
+/config/local/common.php
+/config/local/console.php
+/config/local/params.php
+/config/local/web.php
+/config/local/test.php

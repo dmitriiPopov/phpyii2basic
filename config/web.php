@@ -1,9 +1,10 @@
 <?php
 
-$params = require(__DIR__ . '/params.php');
+$params = \yii\helpers\ArrayHelper::merge(require(__DIR__ . '/params.php'), require(__DIR__ . '/local/params.php'));
 
 $config = [
     'id' => 'basic',
+    'name' => 'phpyii2basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
@@ -39,7 +40,11 @@ $config = [
             ],
         ],
 
-        'db' => require(__DIR__ . '/db.php'),
+        'db' => [
+            'class'    => 'yii\db\Connection',
+            'charset'  => 'utf8',
+            //...other parameters must be merged from local/*
+        ],
 
         'urlManager' => [
             'enablePrettyUrl' => true,

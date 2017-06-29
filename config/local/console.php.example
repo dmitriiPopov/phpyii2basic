@@ -1,0 +1,7 @@
+<?php
+/**
+ * local console configuration (for console application)
+ */
+return [
+
+];

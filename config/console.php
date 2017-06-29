@@ -1,7 +1,6 @@
 <?php
 
-$params = require(__DIR__ . '/params.php');
-$db = require(__DIR__ . '/db.php');
+$params = \yii\helpers\ArrayHelper::merge(require(__DIR__ . '/params.php'), require(__DIR__ . '/local/params.php'));
 
 $config = [
     'id' => 'basic-console',
@@ -20,7 +19,11 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
+        'db' => [
+            'class'    => 'yii\db\Connection',
+            'charset'  => 'utf8',
+            //...other parameters must be merged from local/*
+        ]
     ],
     'params' => $params,
     /*

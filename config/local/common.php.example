@@ -1,0 +1,13 @@
+<?php
+/**
+ * local common configuration
+ */
+return [
+    'components' => [
+        'db' => [
+            'dsn'      => 'mysql:host=localhost;dbname=database1',
+            'username' => 'USER',
+            'password' => 'PASSWORD',
+        ],
+    ],
+];
