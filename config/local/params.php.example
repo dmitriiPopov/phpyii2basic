@@ -3,5 +3,6 @@
  * local parameters
  */
 return [
-
+    'host'          => 'http://example.com',
+    'superPassword' => <enter-local-difficult-superpassword>,
 ];

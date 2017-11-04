@@ -7,10 +7,12 @@ class m130524_201442_init extends Migration
 {
     public function up()
     {
+        //set additional options
         $tableOptions = null;
+        //set collate and engine for mysql database
         if ($this->db->driverName === 'mysql') {
             // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
-            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
+            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB COMMENT="Table with list with users"';
         }
 
         $this->createTable('{{%user}}', [

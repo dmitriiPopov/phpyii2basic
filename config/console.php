@@ -1,7 +1,7 @@
 <?php
-
-$params = \yii\helpers\ArrayHelper::merge(require(__DIR__ . '/params.php'), require(__DIR__ . '/local/params.php'));
-
+/**
+ * Console configuration file
+ */
 $config = [
     'id' => 'basic-console',
     'basePath' => dirname(__DIR__),
@@ -25,7 +25,7 @@ $config = [
             //...other parameters must be merged from local/*
         ]
     ],
-    'params' => $params,
+
     /*
     'controllerMap' => [
         'fixture' => [ // Fixture generation command line.
@@ -34,13 +34,5 @@ $config = [
     ],
     */
 ];
-
-if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-    ];
-}
 
 return $config;

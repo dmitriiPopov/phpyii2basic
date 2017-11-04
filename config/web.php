@@ -1,7 +1,7 @@
 <?php
-
-$params = \yii\helpers\ArrayHelper::merge(require(__DIR__ . '/params.php'), require(__DIR__ . '/local/params.php'));
-
+/**
+ * Web configuration file
+ */
 $config = [
     'id' => 'basic',
     'name' => 'phpyii2basic',
@@ -16,7 +16,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass'   => 'app\components\identity\User',
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -50,10 +50,14 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName'  => false,
             'rules'           => [
+
             ],
         ],
     ],
-    'params' => $params,
+
+    'modules' => [
+
+    ],
 ];
 
 if (YII_ENV_DEV) {

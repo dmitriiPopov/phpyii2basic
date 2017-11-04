@@ -1,4 +1,4 @@
-Yii 2 Basic Project Template
+Php Yii 2 Basic Project Template
 ============================
 
 Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
@@ -190,3 +190,14 @@ vendor/bin/codecept run functional,unit -- --coverage-html --coverage-xml
 ```
 
 You can see code coverage output under the `tests/_output` directory.
+
+### Istall User Roles
+
+```
+https://github.com/dektrium/yii2-user/blob/master/docs/getting-started.md
+```
+
+### Set RBAC
+```
+https://github.com/yii2mod/yii2-rbac
+````
